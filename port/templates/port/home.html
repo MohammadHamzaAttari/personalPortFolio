@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% block content%}
+<div class='container'>
+       <div class='row'>
+          <div class='col-12'> 
+           <h1 class='text-center'>My First Blog Site</h1>
+          </div>
+        </div>
+        <div class='row '>
+          <div class='col-12 d-flex justify-content-center'>
+            {% load static %}
+            <a href={% static 'port/my_resume.pdf'%}>
+              <img src={% static 'port/hamza.jpg' %} width=399/>
+              </a>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class='row'>
+          <h3>My Projects</h3>
+        {% for pro in project %}
+        
+            <div class='col-12 col-md-4'>
+              <div class='card mt-5' style='width:18rem;'>
+                 {% if pro.image.url%}
+                    <a href='{{ pro.url }}'>
+                     <image src='{{ pro.image.url }}' class='card-img-top' height='300px'/>
+                    </a>
+                 {% endif %}
+                  {% if not pro.image.url %}
+                    <image src='{{ pro.image.url }}'/>
+                  {% endif %}
+                  <div class='card-body'>
+                     <h5 class='card-title'>{{ pro.title }}</h5>
+                      <p class='card-body'>{{ pro.discription|truncatechars:40 }}</p>
+                  </div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock%}

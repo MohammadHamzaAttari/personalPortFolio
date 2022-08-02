@@ -1,0 +1,11 @@
+{% extends 'blog/base.html'%}
+{% block content%}
+    <div class='container'>
+    <h1 class='text-center'> Blog Page </h1>
+    {% for data in model_data %}
+    <h2> {{ data.heading }} </h2> 
+    <p>{{ data.description}}</p>
+    <p>{{ data.date }}</p>
+    {% endfor %}  
+    </div>
+{% endblock%}
