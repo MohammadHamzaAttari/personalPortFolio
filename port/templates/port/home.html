@@ -3,14 +3,14 @@
 <div class='container'>
        <div class='row'>
           <div class='col-12'> 
-           <h1 class='text-center'>My First Blog Site</h1>
+           <h1 class='text-center'>Chrnoic Kidney Disease</h1>
           </div>
         </div>
         <div class='row '>
           <div class='col-12 d-flex justify-content-center'>
             {% load static %}
             <a href={% static 'port/my_resume.pdf'%}>
-              <img src={% static 'port/hamza.jpg' %} width=399/>
+              <img src={% static 'port/slader.jpg' %} width=399/>
               </a>
           </div>
         </div>
@@ -30,7 +30,7 @@
                   {% if not pro.image.url %}
                     <image src='{{ pro.image.url }}'/>
                   {% endif %}
-                  <div class='card-body'>
+                  <div class='card-body' style='background:skyblue'>
                      <h5 class='card-title'>{{ pro.title }}</h5>
                       <p class='card-body'>{{ pro.discription|truncatechars:40 }}</p>
                   </div>
@@ -38,5 +38,10 @@
         </div>
       {% endfor %}
     </div>
+    
 </div>
+
+{% endblock%}
+{% block 'chatbot' %}
+
 {% endblock%}

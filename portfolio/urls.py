@@ -18,10 +18,14 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 from port import views
+from simple_chatbot.views import SimpleChatbot
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('blog/', include('blog.urls'))
+    path('simple_chatbot/',SimpleChatbot.as_view(),name='chatbot'),
+    path('blog/', include('blog.urls')),
+
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CKD</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" integrity="sha512-sopmFEmRVsWt542K+yzH3FQ1KJfdosOJG+bGLs9ZJT07b/3gUxRA9ICuJg2JtoZ9WeknAUuwJ0ggnmrV1YL6kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
+<body style='background-color:blue'>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href={% url 'home'%}>Blog Site</a>
+          <a class="navbar-brand" href={% url 'home'%}><img href="media/logo"/></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -42,5 +44,61 @@
       </nav>
       {% block content %}
        {% endblock %}
+       <br><br>
+       <footer class="footer" style="background:gray">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-12 col-md-2 offset-1">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./contactus.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 offset-1">
+              <h5>Our Address</h5>
+              <address>
+                121, Clear Water Bay Road<br />
+                Clear Water Bay, Kowloon<br />
+                HONG KONG<br />
+                <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
+                <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
+                <i class="fa fa-envelope fa-lg"></i>:
+                <a href="mailto:confusion@food.net">confusion@food.net</a>
+              </address>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 align-self-center ">
+    
+              <a class="btn btn-social-icon btn-google" href="https://google.com"><i
+                  class="fa fa-google-plus fa-lg">Google</i></a>
+              <a class="btn btn-social-icon btn-twitter" href="https://twitter.com"><i class="fa fa-twitter fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-facebook" href="facebook.com"><i class="fa fa-facebook fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-google" href="youtube.com"><i class="fa fa-youtube fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-" href="mailto"><i class="fa fa-envelope-o fa-lg"></i></a>
+    
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div style="background:white">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>&copy; All rights reserved by Restorent Con Fusion 2018</p>
+          </div>
+        </div>
+      </div>
+       <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"1add532879a491ec5f29ba05ac4739b21","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
 </body>
 </html>
